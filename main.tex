@@ -9,6 +9,7 @@
 \usepackage{url}
 \usepackage{standalone}
 \usepackage{parskip}
+\usepackage[version=4]{mhchem}
 
 \title{Lecture 2: Experimental Facts of Life}
 \author{Renzo Shredder}
@@ -160,11 +161,148 @@ For a given a beam of electromagnetic radiation with energy (which is proportion
     \item Light frequency $\nu \quad [\mathrm{1/s}]$
 \end{enumerate}
 \subsection*{Expected Results} 
-\begin{itemize}
-    \item As we increase the intensity of the light beam, the kinetic energy of the emitted electrons should increase
-\end{itemize}
+\begin{enumerate}
+    \item As we increase the intensity (i.e., energy) of the light beam, the kinetic energy that is  transfered to the emitted electrons should increase, thus increasing the magnitude of the threshold potential. 
+    \begin{itemize}
+        \item These predictions are based off Maxwellian dynamics 
+        \item Recall: the energy associated with an electromagnetic way can be modeled as a harmonic oscillator 
+        \item This is a consequence of the frequency associated with the EM wave "canceling out" such that the energy associated with any given electromagnetic wave equals the amplitude of the harmonic function modeling the wave
+    \end{itemize}
+    \item The threshold voltage should be independent of the frequency of the light beam. 
+\end{enumerate}
+
 \subsection*{Actual Results}
+\subsection*{Planck's Constant Background}
+The idea that the energy of an electromagnetic wave benig linearly propertional to its frequency first came from the analysis of blackbody radiation by a guy named Planck. 
+\begin{itemize}
+    \item Planck tried to show $E_{\gamma}=h\nu$ via fitting $h$ with an experimental curve (Note: adults shouldn't be curve fitting - and he hated doing it) 
+    \item He had a theory predicting the amount of energy emitted by an object that was hot and glowing as a function of frequency. This theory turned out to completely disagree with experiments unless he set $h=6.626\cdot 10^{-34} \quad \mathrm{J/s}$ 
+    \item This combined with Einstein's 1905 paper ended up revolutionizing physics since it implied that light behaves as a particle (Einsteind ended up getting the Nobel prize for this) 
+\end{itemize}
+Note: for the past 200 years, mainstream physics had become convinced that light only behaves as a wave (double-slit experiment) 
 \section{Electron Diffusion}
+\subsection*{Bucky  Ball Experiment}
+Question: do bucky balls interfere with themselves? 
+\begin{itemize}
+    \item Want to redo a electric diffusion experiment with bucky balls (\ce{C_{60}})
+    \itme However, quantum effects for macroscopic objects are usually insignificantly small
+    \item Note: in principle, we should be able to generalize our results to other macroscopic objects 
+    \item Experiment description
+    \begin{itemize}
+        \item Heat up the bucky balls in an oven and emit them with some definite thermal energy 
+        \item Then we columntate then by sending them through a single slit 
+        \item Then, the bucky balls pass through a diffraction grating and are imaged using photo ionization to see their horizontal position 
+        \item Two different conditions:
+        \begin{enumerate}
+            \item Without grating we get a normally distributed peak of samples that land in the middle of the "landing" screen
+            \item With grating, we still get a peak in the middle of the "landing" screen, but on each side of the peak, there are interference fringes 
+        \end{enumerate}
+        \item Conclusion: we have macroscopic objects interfereing with themselves, even as we shoot them out of the electron beam one-by-one
+    \end{itemize}
+\end{itemize}
 \section{Bell's Inequality}
+Consider the following scenario:
+\begin{itemize}
+    \item Variables:
+    \begin{itemize}
+        \item $\mathrm{Num}(U)=$ number of undergraduates in the class
+        \item $\mathrm{Num}(\Bar{U})=$ number of graduates in the class
+        \item $\mathrm{Num}(B)=$ number of blondes in the class
+        \item $\mathrm{Num}(\Bar{B})=$ number of non-blondes in the class
+        \uten $\mathrm{Num}(M)=$ number of people from Massachusetts in the class
+        \item $\mathrm{Num}(\Bar{M})=$ number of people not from Maryland in the class
+    \end{itemize}
+    \item Say we claim the following inequality: 
+        \begin{equation}
+            \mathrm{Num}(U,\Bar{B}) + \mathrm{Num}(B,\Bar{M}) \geq \mathrm{Num}(U,\Bar{M})
+        \end{equation}
+    \item e.g., for the actual class in the lecture
+        \begin{itemize}
+            \item $\mathrm{Num}(U,\Bar{B})=14$
+            \item $\mathrm{Num}(B,\Bar{M})=1$
+            \item $\mathrm{Num}(U,\Bar{M})=15$ 
+                \begin{itemize}
+                    \item The samples from the class satisfy the inequality condition 
+                \end{itemize}
+        \end{itemize}
+ \end{itemize}   
+Proof for the inequality:
+\begin{itemize}
+    \item $\mathrm{Num}(U,\Bar{B})$ also can be thought of as the number of people in the class who are undergraduates, not blonde and from Massachusetts plus the number of people who are undergraduates, not blonde and not from Massachusetts:
+        \begin{equation}
+            \mathrm{Num}(U,\Bar{B}) = \mathrm{Num}(U,\Bar{B},M) + \mathrm{Num}(U,\Bar{B},\Bar{M})
+        \end{equation}
+    \item $\mathrm{Num}(B,\Bar{M})$ also can be thought of as the number of people in the class who are blonde, not from Massachusetts, and undergraduates plus the number of people who are blonde, not from Massachusetts, graduates:
+        \begin{equation}
+            \mathrm{Num}(B,\Bar{M}) = \mathrm{Num}(B,\Bar{M},U) + \mathrm{Num}(B,\Bar{M},\Bar{U})
+        \end{equation}
+    \item $\mathrm{Num}(U,\Bar{M})$ also can be thought of as the number of people in the class who are undergraduates,not from Massachusetts, and blonde plus the number of people who are undergraduates, not from Massachusetts, and not blonde:
+        \begin{equation}
+            \mathrm{Num}(U,\Bar{M}) = \mathrm{Num}(U,\Bar{M},B) + \mathrm{Num}(U,\Bar{M},\Bar{B})
+        \end{equation}
+    \item Lets rewrite our equation using the equalities defined above: 
+    \begin{equation}
+        \left(\mathrm{Num}(U,\Bar{B},M) + \mathrm{Num}(U,\Bar{B},\Bar{M})\right) + \left(\mathrm{Num}(B,\Bar{M},U) + \mathrm{Num}(B,\Bar{M},\Bar{U})\right) \geq \mathrm{Num}\left(U,\Bar{M},B) + \mathrm{Num}(U,\Bar{M},\Bar{B}\right)
+    \end{equation}
+    \item Simplifying gives us the following inequality:
+    \begin{equation}
+        \mathrm{Num}(U,\Bar{B},M) + \mathrm{Num}(B,\Bar{M},\Bar{U}) \geq 0
+    \end{equation}
+    \item Our end result makes sense since it implies you cant have a negative number of people in a room (which agrees with reality as we know it)
+\end{itemize}
+General conclusions: the number of elements in a set where each element in that set has a binary properties $A$, $B$, and $C$ satisfies the following inequality
+\begin{equation}
+    \mathrm{Num}(A,\Bar{B}) + \mathrm{Num}(B,\Bar{C}) \geq \mathrm{Num}(A,\Bar{C})
+\end{equation}
+Importantly, this inequality is called \textbf{Bell's inequality}.
+\begin{itemize}
+    \item Here, we were able to derive this inequlaity using logic and integers! 
+\end{itemize}
+Conundrum: Electrons have a third property in addition to "color" and "hardness": "whimsyness" where the electron can be whimsical or not whimsical. Let's define the various possible states of an electron as follows:
+\begin{itemize}
+    \item $H=$ hard and $\Bar{H}=$ soft
+    \item $C=$ black and $\Bar{C}=$ white
+    \item $W=$ whimsical and $\Bar{W}=$ not whimsical
+\end{itemize}
+Now, say we perform an experiment on a set of electrons where we measure the following: 
+\begin{itemize}
+    \item The number of electrons that are hard and not black, $\mathrm{Num}(H,\Bar{C})$
+    \item The number of electrons that are black and not whimsical, $\mathrm{Num}(C,\Bar{W})$
+    \item The number of electrons that are hard and not whimsical, $\mathrm{Num}(H,\Bar{W})$
+\end{itemize}
+Aside: Let's prime ourselves for interpreting our three arbitrary binary properties of electrons by redefining each variable as follows: 
+\begin{itemize}
+    \item Hardness corresponds with angular momentum along the $x$-axis
+        \begin{itemize}
+            \item $H$ corresponds with positive angular momentum along the $x$ axis and is denoted $\uparrow_x$
+            \item $\Bar{H}$ corresponds with negative angular momentum along the $x$ axis and is denoted $\downarrow_x$
+        \end{itemize}
+    \item Color corresponds with angular momentum along the $y$-axis
+        \begin{itemize}
+            \item $C$ corresponds with positive angular momentum along the $y$ axis and is denoted $\uparrow_y$
+            \item $\Bar{C}$ corresponds with negative angular momentum along the $y$ axis and is denoted $\downarrow_y$
+        \end{itemize}
+    \item Whimsyness corresponds with the angular momentum along the $z$-axis
+        \begin{itemize}
+            \item $W$ corresponds with positive angular momentum along the $z$ axis and is denoted $\uparrow_z$
+            \item $\Bar{W}$ corresponds with negative angular momentum along the $z$ axis and is denoted $\downarrow_z$
+        \end{itemize}
+\end{itemize}
+Importantly, if we perform this experiment and measure our three variables for each electron, we end up with the following inequality:
+\begin{equation}
+    \mathrm{Num}(H,\Bar{C}) + \mathrm{Num}(C,\Bar{W}) < \mathrm{Num}(H,\Bar{W})
+\end{equation}
+Formally, this translates to...
+\begin{equation}
+    \mathrm{Num}(\uparrow_x,\downarrow_y) + \mathrm{Num}(\uparrow_y,\downarrow_z) < \mathrm{Num}(\uparrow_x,\downarrow_z)
+\end{equation}
+Another way we can write this equation is as follows:
+\begin{equation}
+    \mathrm{Num}(\uparrow_0,\downarrow_{\theta}) + \mathrm{Num}(\uparrow_{\theta},\downarrow_{2\theta}) < \mathrm{Num}(\uparrow_0,\downarrow_{2\theta})
+\end{equation}
+Although we haven't reached a point where we can explain the actual meanings of each variable in the above equation, we should be deeply troubled by these results. Note that we are still assuming these three arbitrary properties are binary. Thus, a mathematical statement we derived from a purely logical perspective turns out to be false (and not just in quantum mechanics!). In fact, later we will use predictive quantum mechanics to show that Bells inequality is violated for all reality.  
+\\
+\\
+Next lecture: going to discuss how our classical approach towards logic, integers, and adding probabilities is misguided. Then we will find a new method for adding probabilities that involves quantum mechanics. 
 \end{document}
 
